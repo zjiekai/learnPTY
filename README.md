@@ -16,3 +16,6 @@ pid of bash `echo $$`
 `vim /usr/include/unistd.h`
 
 STDIN_FILENO
+
+
+http://stackoverflow.com/questions/36687580/sending-ctrl-r-to-bash-in-a-python-subprocess
