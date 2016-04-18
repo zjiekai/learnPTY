@@ -19,3 +19,5 @@ STDIN_FILENO
 
 
 http://stackoverflow.com/questions/36687580/sending-ctrl-r-to-bash-in-a-python-subprocess
+
+ps  xao pid,ppid,pgid,sid,comm | head
