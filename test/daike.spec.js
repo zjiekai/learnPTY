@@ -14,7 +14,42 @@ describe('Product array', function() {
 
 });
 
-describe('Number first', function() {});
-describe('Game of Life', function() {});
+describe('Number first', function() {
+
+  it('[] => []', function() {
+    var arr = [];
+    p2(arr);
+    expect(arr).toEqual([]);
+  });
+
+  it('[1, 2, 3] => [1, 2, 3]', function() {
+    var arr = [1, 2, 3];
+    p2(arr);
+    expect(arr).toEqual([1, 2, 3]);
+  });
+
+  it('[0, 2, 3] => [2, 3, 0]', function() {
+    var arr = [0, 2, 3];
+    p2(arr);
+    expect(arr).toEqual([2, 3, 0]);
+  });
+
+  it('[0, 0, 0] => [0, 0, 0]', function() {
+    var arr = [0, 0, 0];
+    p2(arr);
+    expect(arr).toEqual([0, 0, 0]);
+  });
+
+  it('[0, 1, 0, 3, 12] => [1, 3, 12, 0, 0]', function() {
+    var arr = [0, 1, 0, 3, 12];
+    p2(arr);
+    expect(arr).toEqual([1, 3, 12, 0, 0]);
+  });
+});
+
+describe('Game of Life', function() {
+
+});
+
 describe('Simple root square', function() {});
 describe('Power', function() {});
