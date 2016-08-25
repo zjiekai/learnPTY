@@ -49,6 +49,36 @@ describe('Number first', function() {
 
 describe('Game of Life', function() {
 
+  it('[] => []', function() {
+    var result = p3([]);
+    expect(result).toEqual([]);
+  });
+
+  it('[[1, 1]] => []', function() {
+    var result = p3([[1, 1]]);
+    expect(result).toEqual([]);
+  });
+
+  it('[[1, 1], [2, 2]] => []', function() {
+    var result = p3([[1, 1], [2, 2]]);
+    expect(result).toEqual([]);
+  });
+
+  it('[[1, 1], [1, 2], [2, 2]] => [[1, 1], [1, 2], [2, 2], [2, 1]]', function() {
+    var result = p3([[1, 1], [1, 2], [2, 2]]);
+    expect(result).toContain([1, 1]);
+    expect(result).toContain([1, 2]);
+    expect(result).toContain([2, 2]);
+    expect(result).toContain([2, 1]);
+  });
+
+  it('[[1, 1], [1, 2], [2, 2], [2, 1]] => [[1, 1], [1, 2], [2, 2], [2, 1]]', function() {
+    var result = p3([[1, 1], [1, 2], [2, 2], [2, 1]]);
+    expect(result).toContain([1, 1]);
+    expect(result).toContain([1, 2]);
+    expect(result).toContain([2, 2]);
+    expect(result).toContain([2, 1]);
+  });
 });
 
 describe('Simple root square', function() {});
