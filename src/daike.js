@@ -70,3 +70,34 @@ function p3(live_list) {
   }); 
   return next_live_list;
 }
+
+function p4(n) {
+  if (n < 0) throw 'can not be negative';
+  if (n < 2) return n;
+
+  var left = 1, right = n;
+
+  while (left + 1 < right) {
+    var mid = (left + right) >> 1;
+    if (mid * mid > n) {
+      right = mid;
+    } else {
+      left = mid;
+    }
+  }
+  return left;
+}
+
+function p5(x, n) {
+  if (n < 0) throw 'can not be negative';
+  if (n === 0) return 1;
+  var ans = 1, pow = x;
+  while (n > 0) {
+    if (n % 2) {
+      ans *= pow;
+    }
+    pow = pow * pow;
+    n = n >> 1;
+  }
+  return ans;
+}

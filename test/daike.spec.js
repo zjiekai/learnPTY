@@ -81,5 +81,39 @@ describe('Game of Life', function() {
   });
 });
 
-describe('Simple root square', function() {});
-describe('Power', function() {});
+describe('Simple root square', function() {
+
+  it('throws negative', function() {
+    expect(function() {p4(-3);}).toThrow();
+  });
+
+  it('0 => 0; 1 => 1', function() {
+    expect(p4(0)).toEqual(0);
+    expect(p4(1)).toEqual(1);
+  });
+
+  it('2 => 1; 9 => 3; 10 => 3', function() {
+    expect(p4(2)).toEqual(1);
+    expect(p4(9)).toEqual(3);
+    expect(p4(10)).toEqual(3);
+  });
+});
+
+describe('Power', function() {
+
+  it('throws negative', function() {
+    expect(function() {p5(1, -3);}).toThrow();
+  });
+
+  it('(1, ) => 1, (, 0) => 1', function() {
+    expect(p5(1, 1)).toEqual(1);
+    expect(p5(1, 3)).toEqual(1);
+    expect(p5(1, 0)).toEqual(1);
+    expect(p5(10, 0)).toEqual(1);
+  });
+
+  it('misc', function() {
+    expect(p5(2, 10)).toEqual(1024);
+    expect(p5(3, 25)).toEqual(847288609443);
+  });
+});
