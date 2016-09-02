@@ -1,0 +1,33 @@
+.voting {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  user-select: none;
+}
+
+.voting button {
+  flex: 1 0 0;
+
+  background-color: #673AB7;
+  border-width: 0;
+  color: white;
+}
+
+.voting button:first-child {
+  border-bottom: 1px solid white;
+}
+
+.voting button:active {
+  background-color: white;
+  color: #311B92;
+}
+
+.voting button.voted {
+  background-color: #311B92;
+}
