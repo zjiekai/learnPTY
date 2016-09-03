@@ -1,7 +1,7 @@
 import React from 'react';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
 
-require('./Voting.css');
+import './Voting.css';
 
 export default React.createClass({
   mixins: [PureRenderMixin],
